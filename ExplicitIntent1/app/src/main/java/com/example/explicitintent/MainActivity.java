@@ -1,0 +1,67 @@
+package com.example.explicitintent;
+
+import static android.view.View.INVISIBLE;
+import static android.view.View.VISIBLE;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.os.PersistableBundle;
+import android.text.TextUtils;
+import android.util.Log;
+import android.view.View;
+
+import androidx.activity.EdgeToEdge;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
+
+import com.example.explicitintent.databinding.ActivityMainBinding;
+
+public class MainActivity extends AppCompatActivity {
+
+    public static ActivityMainBinding mainBinding;
+
+    public static final String SEND_INTENT_MESSAGE_KEY = "message";
+    public static final int REQUEST_TEXT = 1;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        EdgeToEdge.enable(this);
+        mainBinding = ActivityMainBinding.inflate(getLayoutInflater());
+        setContentView(mainBinding.getRoot());
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
+            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
+            return insets;
+        });
+
+        mainBinding.buttonSend.setOnClickListener(view -> {
+            if (!mainBinding.editTextMessage.getText().toString().isEmpty()) {
+                String message = mainBinding.editTextMessage.getText().toString();
+
+                Intent intent = new Intent(this, SecondActivity.class);
+                intent.putExtra(SEND_INTENT_MESSAGE_KEY, message);
+//                startActivity(intent);
+                startActivityForResult(intent, REQUEST_TEXT);
+            }
+        });
+    }
+
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (requestCode == REQUEST_TEXT) {
+            if (requestCode == SecondActivity.RESULT_OK) {
+                String reply = data.getStringExtra(SecondActivity.REPLY_INTENT_REPLY_KEY);
+                mainBinding.textReply.setVisibility(VISIBLE);
+                mainBinding.textReply.setText(reply);
+            }
+        }
+    }
+}
