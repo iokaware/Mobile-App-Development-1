@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">Scrolling Text</string>
+    <string name="heading">Digital Image Processing</string>
+    <string name="subheading">Acknowledgments</string>
+    <string name="article"><b>We are indebted to a number of individuals</b> in academic circles, industry, and gov
+ernment who have contributed to this edition of the book. In particular, we wish
+to extend our appreciation to Hairong Qi and her students, Zhifei Zhang and
+Chengcheng Li, for their valuable review of the material on neural networks, and for
+their help in generating examples for that material.
+We also want to thank Ernesto
+Bribiesca Correa for providing and reviewing material on slope chain codes, and
+Dirk Padfield for his many suggestions and review of several chapters in the book.
+We appreciate Michel Kocher’s many thoughtful comments and suggestions over
+the years on how to improve the book. Thanks also to Steve Eddins for his sugges
+tions on MATLAB and related software issues.
+<b><i>Numerous individuals have contributed to material carried</i></b> over from the previ
+ous to the current edition of the book. Their contributions have been important in so
+many different ways that we find it difficult to acknowledge them in any other way
+but alphabetically. We thank Mongi A. Abidi, Yongmin Kim, Bryan Morse, Andrew
+Oldroyd, Ali M. Reza, Edgardo Felipe Riveron, Jose Ruiz Shulcloper, and Cameron
+H.G. Wright for their many suggestions on how to improve the presentation and/or
+the scope of coverage in the book. We are also indebted to Naomi Fernandes at the
+MathWorks for providing us with MATLAB software and support that were impor
+tant in our ability to create many of the examples and experimental results included
+in this edition of the book.
+         www.ImageProcessingPlace.com
+ A significant percentage of the new images used in this edition (and in some
+cases their history and interpretation) were obtained through the efforts of indi
+viduals whose contributions are sincerely appreciated. In particular, we wish to
+acknowledge the efforts of Serge Beucher, Uwe Boos, Michael E. Casey, Michael
+W. Davidson, Susan L. Forsburg, Thomas R. Gest, Daniel A. Hammer, Zhong He,
+Roger Heady, Juan A. Herrera, John M. Hudak, Michael Hurwitz, Chris J. Johannsen,
+Rhonda Knighton, Don P. Mitchell, A. Morris, Curtis C. Ober, David. R. Pickens,
+Michael Robinson, Michael Shaffer, Pete Sites, Sally Stowe, Craig Watson, David
+K. Wehe, and Robert A. West. We also wish to acknowledge other individuals and
+organizations cited in the captions of numerous figures throughout the book for
+their permission to use that material.
+We also thank Scott Disanno, Michelle Bayman, Rose Kernan, and Julie Bai for
+their support and significant patience during the production of the book.</string>
+</resources>
